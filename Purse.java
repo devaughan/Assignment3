@@ -1,4 +1,6 @@
 import java.util.Scanner;
+
+import javax.swing.plaf.ColorUIResource;
 public class Purse {
     public static void main(String[] args) {
 
@@ -53,9 +55,11 @@ public class Purse {
 
     public static void removeCoins(ArrayBag<String> myPurse) {
         String[] coinStrings = {"DO", "H", "Q", "DI", "N", "P"};
+        int numberOfCoins;
 
         for (int i = 0; i < coinStrings.length; i++) {
-            while (myPurse.getFrequencyOf(coinStrings[i]) > 1) {
+            numberOfCoins = myPurse.getFrequencyOf(coinStrings[i]);
+            for (int x = 1; x < numberOfCoins; x++) {
                 myPurse.remove(coinStrings[i]);
             }
         }
