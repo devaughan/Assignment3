@@ -1,6 +1,4 @@
 import java.util.Scanner;
-
-import javax.swing.plaf.ColorUIResource;
 public class Purse {
     public static void main(String[] args) {
 
